@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> My Page</title>
+<style>
+body{
+	background-image: url('./images/back.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover ;
+}
+h1{
+	color: white;
+	margin-left : 30px ;
+	margin-top: 50px;
+	<!--background-color: rgba(73,181,191,0.2);-->
+}
+.blok{
+	color: rgb(192,192,164);
+	font-family: Swis721 Cn BT,Times New Roman;  
+	font-size: 20px;  
+	margin-left: 25px;
+}
+.blok span{
+	<!--background-color: rgba(211,219,219,0.1);-->	
+	padding: 5px;
+
+}
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  margin-top: 25px; 
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+  background-color:rgba(11,11,11,0.25);
+}
+</style>
+</head>
+<body>
+<script>
+var pattern_list="abcdefghijklmnopqrstuvwxyz@#$%HTML_0123456789"
+var example=''
+ 
+function generate_password(plength){
+	example=''
+	for (i=0;i<plength;i++)
+	example+=pattern_list.charAt(Math.floor(Math.random()*pattern_list.length))
+	return example
+}
+ 
+function execute_To_Generate(enterlength){
+	document.password_generate.output.value=generate_password(enterlength)
+}
+</script>
+
+<h1> Welcome, I am Deep 
+<img src="./images/my.png" alt="My pic" style= "float:right;width:25%;height:25%;margin-right:50px;" >
+</h1>
+<p>
+<div class= "blok" >
+<span> I am a tech and science enthusiast and currently pursuing second year of Electrical Engineering at <abbr title="Indian Institute of Technology Bombay"><i>IITB</i></abbr>.
+</span>
+</div>
+<hr>
+<div class="blok" style="background-color:rgba(211,219,219,0.2);margin-left:0px;padding-left:30px;" >Some of my past time hobbies are:
+<ul>
+	<li>Swimming</li>
+	<li>Reading</li>
+	<li>Cooking  and critiquing food.</li>
+	<li>Philosophical thinking. (kind of, I mean who does not?)</li>
+	<li>Skating</li>
+	<li>Yup... basically every common hobby anyone has.</li>
+</ul>
+</div>
+
+<div class= "blok">
+<form name="password_generate" style="width:400px;">
+ 
+<input type="text" size=18 name="output" autofocus="autofocus" style="text-align: center;width: 182px;">
+<input type="button" value="Generate Password" onClick="execute_To_Generate(this.form.password_Length.value)">
+<br />
+<br />
+<b style="color:white">Password Length:</b> <input type="text" name="password_Length" value="7"style="text-align: center;width: 50px;"/>
+</form>
+
+<table>
+<tr>
+	<th>THIS</th>
+	<th>PAGE</th>
+	<th>IS</th>
+</tr>
+<tr>
+	<td rowspan=2 colspan=2>STILL</td>
+	<td>in</td>
+</tr>
+<tr><td>Progress</td> </tr>
+</table>
+</div>
+</p>
+<footer>
+<marquee behavior="scroll" direction="right" style="color:white;"><a href="https://www.wncc-iitb.org/wiki/index.php/HTML" style="color:white; text-decoration:none;" target="_blank">To know more about this refer..  </a></marquee>
+</footer>
+</body>
+
+</html>
