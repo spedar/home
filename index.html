@@ -2,39 +2,15 @@
 <html>
 <head>
 <title> My Page</title>
+<link rel = "stylesheet" type="text/css" href = "./style/stylesheet.css?version=1" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Henny Penny">
 <style>
 body{
-	background-image: url('./images/back.png');
+	background-image: url("./images/rangoli.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover ;
-}
-h1{
-	color: white;
-	margin-left : 30px ;
-	margin-top: 50px;
-	<!--background-color: rgba(73,181,191,0.2);-->
-}
-.blok{
-	color: rgb(192,192,164);
-	font-family: Swis721 Cn BT,Times New Roman;  
-	font-size: 20px;  
-	margin-left: 25px;
-}
-.blok span{
-	<!--background-color: rgba(211,219,219,0.1);-->	
-	padding: 5px;
-
-}
-table, th, td {
-  border: 3px solid black;
-  border-collapse: collapse;
-  margin-top: 25px; 
-}
-th, td {
-  padding: 15px;
-  text-align: center;
-  background-color:rgba(11,11,11,0.25);
+	padding-right: 20px;
 }
 </style>
 </head>
@@ -55,8 +31,18 @@ function execute_To_Generate(enterlength){
 }
 </script>
 
-<h1> Welcome, I am Deep 
-<img src="./images/my.png" alt="My pic" style= "float:right;width:25%;height:25%;margin-right:50px;" >
+
+<ul class="sidenav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#courses">My Courses</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="content"> 
+
+<h1 id="home"> Welcome, I am Deep 
+<img src="./images/my.png" alt="My pic" style= "float:right;width:25%;height:25%;margin-right:50px;margin-top:4%;" >
 </h1>
 <p>
 <div class= "blok" >
@@ -64,7 +50,7 @@ function execute_To_Generate(enterlength){
 </span>
 </div>
 <hr>
-<div class="blok" style="background-color:rgba(211,219,219,0.2);margin-left:0px;padding-left:30px;" >Some of my past time hobbies are:
+<div class="blok" id = "about" style="background-color:rgba(211,219,219,0.2);margin-left:0px;padding-left:30px;" >Some of my past time hobbies are:
 <ul>
 	<li>Swimming</li>
 	<li>Reading</li>
@@ -73,8 +59,23 @@ function execute_To_Generate(enterlength){
 	<li>Skating</li>
 	<li>Yup... basically every common hobby anyone has.</li>
 </ul>
+<br>
+</div>
+<br>
+<div class="blok" style="background-color:rgba(211,219,219,0.2);margin-left:0px;padding: 5px 5px 5px 30px ; ">
+
+<p>
+I am from Mumbai. I am also currently pursuing a minor in Computer Science. I like to read fiction, thriller, mythology
+novels. I also paint in free time. I had planned of putting up a website from a long time but could not get motivated 
+enough primarily due to lack of content. This is still going to be a problem but I assure by some months this will be 
+good. If you have any suggestions do let me know. If you have read all this kindly read this too: "The above paragraph was 
+not meant to be read and were just some words to give this page some length :P Although there may be some truth to it." Here 
+is something I tried with buttons and script.
+</p>
+
 </div>
 
+<br>
 <div class= "blok">
 <form name="password_generate" style="width:400px;">
  
@@ -84,6 +85,26 @@ function execute_To_Generate(enterlength){
 <br />
 <b style="color:white">Password Length:</b> <input type="text" name="password_Length" value="7"style="text-align: center;width: 50px;"/>
 </form>
+
+<table id= "courses">
+<caption>Some of the courses taken:</caption>
+ <tr style="font-style:bold;">
+    <th>Semester</th>
+    <th>Course code and name</th>
+  </tr>
+  <tr>
+	<tr>
+	<td>Spring 2020</td>
+    <td>Cs 213 Data structures and Analysis</td>    </tr>
+	<tr>	<td>Spring 2020</td>	<td>Analog Circuits</td></tr>
+	<tr>	<td>Spring 2020</td>	<td>Analog Circuits lab</td>   </tr>
+	<tr>	<td>Spring 2020</td>	<td>Digital Systems</td>	</tr>
+	<tr>	<td>Spring 2020</th>	<td>Digital Lab</td>	</tr>
+	<tr>	<td>Spring 2020</td>	<td>Signals and systems</td>	</tr>  
+    <tr>    <td>Autumn 2019</td>    <td>Semiconductor devices</td>	</tr>
+	<tr>	<td>Autumn 2019</td>	<td>Network theory</td>	</tr>
+	<tr>	<td>Autumn 2019</td>	<td>Probability analysis and interpretation</td>	</tr>
+</table>
 
 <table>
 <tr>
@@ -99,9 +120,13 @@ function execute_To_Generate(enterlength){
 </table>
 </div>
 </p>
+
 <footer>
-<marquee behavior="scroll" direction="right" style="color:white;"><a href="https://www.wncc-iitb.org/wiki/index.php/HTML" style="color:white; text-decoration:none;" target="_blank">To know more about this refer..  </a></marquee>
+<marquee id = "contact" behavior="scroll" direction="right" style="color:white;"><a href="https://www.wncc-iitb.org/wiki/index.php/HTML" style="color:white; text-decoration:none;" target="_blank">To know more about how I built this refer..  </a></marquee>
 </footer>
+</div>
+
+
 </body>
 
 </html>
