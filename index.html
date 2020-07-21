@@ -2,16 +2,16 @@
 <html>
 <head>
 <title> My Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel = "stylesheet" type="text/css" href = "./style/stylesheet.css?version=1" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Henny Penny">
+
 <style>
 body{
 	background-image: url("./images/rangoli.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover ;
-	padding-right: 20px;
 }
 </style>
 </head>
@@ -37,17 +37,18 @@ function execute_To_Generate(enterlength){
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About Me</a></li>
   <li><a href="#courses">My Courses</a></li>
+  <li><a href="#gallery">Gallery</a></li>  
   <li><a href="#contact">Contact</a></li>
 </ul>
 
 <div class="content"> 
 
 <h1 id="home"> Welcome, I am Deep 
-<img src="./images/my.png" alt="My pic" style= "float:right;width:25%;height:25%;margin-right:50px;margin-top:4%;" >
+<img src="./images/my.png" alt="My pic" id="mypic" style= "float:right;width:315px;height:auto;margin-right:50px;margin-top:5%;" >
 </h1>
 
 <div class= "blok" >
-<span> I am a tech and science enthusiast and currently pursuing second year of Electrical Engineering at <abbr title="Indian Institute of Technology Bombay"><i>IITB</i></abbr>.
+<span> I am a tech and science enthusiast and currently pursuing second year of Electrical Engineering at <abbr title="Indian Institute of Technology Bombay"><i><a href="https://www.ee.iitb.ac.in/web/" style="text-decoration: none; color: rgb(192,192,164);" target="_blank" >IITB</a></i></abbr>.
 </span>
 </div>
 <hr>
@@ -70,8 +71,12 @@ I am from Mumbai. I am also currently pursuing a minor in Computer Science. I li
 novels. I also paint in free time. I had planned of putting up a website from a long time but could not get motivated 
 enough primarily due to lack of content. This is still going to be a problem but I assure by some months this will be 
 good. If you have any suggestions do let me know. If you have read all this kindly read this too: "The above paragraph was 
-not meant to be read and were just some words to give this page some length :P Although there may be some truth to it." Here 
-is something I tried with buttons and script.
+not meant to be read and were just some words to give this page some length :P Although there may be some truth to it."<br>
+I am kidding  <b><sub>┐(‘～`;)┌</sub></b>  Head over 
+to bottom of the page and do write to me! 
+</p>
+<p>
+I  get confused most of the times while making new passwords. I thought why not give the following a try. Here is something I tried with buttons and script to generate password of any length.
 </p>
 
 </div>
@@ -107,6 +112,44 @@ is something I tried with buttons and script.
 	<tr>	<td>Autumn 2019</td>	<td>Probability analysis and interpretation</td>	</tr>
 </table>
 
+<div class="blok">
+	<p style="font-size: larger;">Here are some pictures from my trip to Goa!</p>
+	<div class="gall" id="gallery">
+	<div class="mySlides">
+	  <div class="numbertext">1 / 3</div>
+	  <img src="./images/spiral.jpg" >
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">2 / 3</div>
+	  <img src="./images/structure.jpg" >
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">3 / 3</div>
+	  <img src="./images/goa_violin.jpg" >
+	</div>
+	    
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+  
+	<div class="caption-container">
+	  <p id="caption"></p>
+	</div>
+  
+	<div class="row">
+	  <div class="column">
+		<img class="demo cursor" src="./images/spiral.jpg" style="width:100%" onclick="currentSlide(1)" alt="Spiral staircase">
+	  </div>
+	  <div class="column">
+		<img class="demo cursor" src="./images/structure.jpg" style="width:100%" onclick="currentSlide(2)" alt="House of Goa Museum">
+	  </div>
+	  <div class="column">
+		<img class="demo cursor" src="./images/goa_violin.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mario Art Gallery">
+	  </div>
+	</div>
+	</div>
+</div>
 <table>
 <tr>
 	<th>THIS</th>
@@ -122,12 +165,35 @@ is something I tried with buttons and script.
 </div>
 </p>
 
+<div class="cont_form" id = "contact">
+	<p><h2>Contact form</h2></p>
+	<div class='container' id="cform">
+		<form
+		action="https://formspree.io/myynlgee"
+		method="POST"
+	>
+		<label>
+		Your email:
+		<input type="text" name="_replyto" placeholder="Your email id...">
+		</label>
+		<label>
+		Your message:
+		<textarea name="message" placeholder="Write something..."></textarea>
+		</label>
+	
+		<!-- your other form fields go here -->
+	
+		<button type="submit"><span>Send</span></button>
+	</form>
+	</div>
+</div>
+
 <footer>
-<marquee id = "contact" behavior="scroll" direction="right" style="color:white;"><a href="https://www.wncc-iitb.org/wiki/index.php/HTML" style="color:white; text-decoration:none;" target="_blank">To know more about how I built this refer..  </a></marquee>
+<marquee behavior="scroll" direction="right" style="color:white;"><a href="https://www.wncc-iitb.org/wiki/index.php/HTML" style="color:white; text-decoration:none;" target="_blank">To know more about how I built this refer..  </a></marquee>
 </footer>
 </div>
 
-
+<script src="./all.js"></script>
 </body>
 
 </html>
